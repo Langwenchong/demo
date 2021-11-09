@@ -32,7 +32,7 @@ new Vue({
 import Mock from 'mockjs'
 
 
-Mock.mock('/loginValidation', 'post',
+Mock.mock('/loginValidation/', 'post',
   req => {
     const {
       username,
@@ -46,6 +46,26 @@ Mock.mock('/loginValidation', 'post',
     } else {
       return {
         status: 1,
+      }
+    }
+  }
+)
+
+Mock.mock('/registerValidation/', 'post',
+  req => {
+    const {
+      username,
+      password,
+      type
+    } = JSON.parse(req.body);
+    console.log(username, password, type);
+    if (username === "admin" && password === "123456" && type === "student") {
+      return {
+        status: 1,
+      }
+    } else {
+      return {
+        status: 0,
       }
     }
   }

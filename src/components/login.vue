@@ -90,7 +90,7 @@ export default {
             password: password,
           };
           const url = `/loginValidation/`;
-          this.axios.post("/loginValidation", data).then((res) => {
+          this.axios.post(url, data).then((res) => {
             if (res.data.status === 0) {
               var date = new Date();
               var s = "日一二三四五六";
@@ -113,8 +113,8 @@ export default {
               });
             } else {
               this.$notify.error({
-                title: "错误",
-                message: "登陆失败，请检查账号是否存在或者密码是否正确❌！",
+                title: "登陆失败❌",
+                message: "登陆失败，请检查账号是否存在或者密码是否正确！",
               });
             }
           });
