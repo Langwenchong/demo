@@ -47,15 +47,15 @@ export default new Router({
       path: '/TestModel',
       name: 'TestModel',
       component: () => import('@/components/TestModel'),
-      children: [{
-        path: '/demo01',
-        name: 'demo01',
-        component: () => import('@/components/demo01')
-      }, {
-        path: '/demo02',
-        name: 'demo02',
-        component: () => import('@/components/demo02')
-      }]
+      // children: [{
+      //   path: '/demo01',
+      //   name: 'demo01',
+      //   component: () => import('@/components/demo01')
+      // }, {
+      //   path: '/demo02',
+      //   name: 'demo02',
+      //   component: () => import('@/components/demo02')
+      // }]
     }
   ]
 })
