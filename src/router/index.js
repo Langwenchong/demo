@@ -6,6 +6,7 @@ import login from '@/components/login'
 import register from '@/components/register'
 import forget from '@/components/forget'
 
+
 Vue.use(Router)
 
 export default new Router({
@@ -38,8 +39,23 @@ export default new Router({
           path: 'forget',
           name: 'forget',
           component: forget
-        }
+        },
+
       ]
     },
+    {
+      path: '/TestModel',
+      name: 'TestModel',
+      component: () => import('@/components/TestModel'),
+      children: [{
+        path: '/demo01',
+        name: 'demo01',
+        component: () => import('@/components/demo01')
+      }, {
+        path: '/demo02',
+        name: 'demo02',
+        component: () => import('@/components/demo02')
+      }]
+    }
   ]
 })
