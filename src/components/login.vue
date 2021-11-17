@@ -95,7 +95,7 @@ export default {
               var date = new Date();
               var s = "日一二三四五六";
               const h = this.$createElement;
-              this.$router.push({ name: "demo01" });
+              this.$router.push({ name: "TestModel" });
               this.$notify({
                 title: "登陆成功✔️",
                 message: h(
